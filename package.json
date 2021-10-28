@@ -2,9 +2,9 @@
   "name": "case",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -22,3 +22,6 @@
   },
   "homepage": "https://github.com/ravikgambhire/webcase#readme"
 }
+
+
+

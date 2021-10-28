@@ -3,6 +3,7 @@ const app = express(); // Create an ExpressJS app
 const bodyParser = require('body-parser'); // middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.set('port', (process.env.PORT || 5000))
 // Route to Homepage
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/static/index.html');
@@ -13,7 +14,9 @@ app.get('/thanks', (req, res) => {
   res.sendFile(__dirname + '/static/thankyou.html');
 });
 
-const port = 3000 // Port we will listen on
 
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
 // Function to listen on the port
-app.listen(port, () => console.log(`This app is listening on port ${port}`));
+//app.listen(port, () => console.log(`This app is listening on port ${port}`));
