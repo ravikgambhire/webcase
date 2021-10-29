@@ -17,6 +17,4 @@ app.get('/thanks', (req, res) => {
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
-})
-// Function to listen on the port
-//app.listen(port, () => console.log(`This app is listening on port ${port}`));
+});
